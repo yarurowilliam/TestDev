@@ -42,4 +42,11 @@ export class AppComponent implements OnInit {
     this.listMovies.splice(indice,1);
     this.toastr.info('La movie fue eliminada' , 'Movie Eliminada!');
   }
+
+  ordenarYear(): void{
+    this.listMovies.sort(function(a, b) {
+      return a.year - b.year;
+    });
+    console.log(this.listMovies)
+  }
 }
